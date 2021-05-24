@@ -3,7 +3,7 @@
 // Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
 const button1 = document.querySelector("[data-action='increment']");
 const button2 = document.querySelector("[data-action='decrement']");
-const value = document.querySelector("#value");
+const value = document.getElementById('value');
 
 let counterValue = 0;
 const increment = () => {

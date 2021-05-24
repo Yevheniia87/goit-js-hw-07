@@ -16,15 +16,7 @@ const images = [
   },
 ];
 
-// const createGalleryItem = ({ url, alt }) =>
-//   `<li><img src="${url}" alt="${alt}" width = 200 height = 150></li>`;
-// const galleryMarkup = images.reduce(
-//   (acc, item) => acc + createGalleryItem(item),
-//   ""
-// );
-// const galleryList = document.querySelector("#gallery");
-// galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
-// galleryList.setAttribute("style", "list-style-type:none; display: flex;");
+
 
  
 
@@ -32,16 +24,9 @@ const ulList = document.createElement('li');
 ulList.classList.add('img_block');
 const ulListEl = document.createElement('images');
 ulListEl.classList.add('img_list');
+const galleryList = document.querySelector('#gallery');
 
-for (let img of images) {
-  const galleryList = document.getElementById("gallery").insertAdjacentHTML('afterbegin', `<li><img src="${img.url}" alt="${img.alt}" width = 150 height = 100></li>`);
-  
-};
-
-//  const galleryList = document.querySelector("#gallery");
-// images.forEach(el => {
-//   galleryList.insertAdjacentHTML('afterbegin', `<li><img src="${img.url}" alt="${img.alt}" width = 150 height = 100></li>`);
-//   galleryList.setAttribute("style", "img_list: none; display: flex; ");
-// });
-
-
+images.forEach(img => {
+  galleryList.insertAdjacentHTML('afterbegin', `<li><img src="${img.url}" alt="${img.alt}" width = 150 height = 100></li>`);
+});
+galleryList.setAttribute("style", "list-style-type:none; display: flex; flex-direction: space-between; justify-content: space-between;");
