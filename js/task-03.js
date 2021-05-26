@@ -20,13 +20,20 @@ const images = [
 
  
 
-const ulList = document.createElement('li');
-ulList.classList.add('img_block');
-const ulListEl = document.createElement('images');
-ulListEl.classList.add('img_list');
-const galleryList = document.querySelector('#gallery');
+// const ulList = document.createElement('li');
+// ulList.classList.add('img_block');
+// const ulListEl = document.createElement('images');
+// ulListEl.classList.add('img_list');
+ //const galleryList = document.querySelector('#gallery');
+
+// images.forEach(img => {
+//   galleryList.insertAdjacentHTML('afterbegin', `<li><img src="${img.url}" alt="${img.alt}" width = 150 height = 100></li>`);
+// });
+// galleryList.setAttribute("style", "list-style-type:none; display: flex;   align-items: center; flex-direction: column;");
+
+// console.log(galleryList);
 
 images.forEach(img => {
-  galleryList.insertAdjacentHTML('afterbegin', `<li><img src="${img.url}" alt="${img.alt}" width = 150 height = 100></li>`);
+  document.querySelector('#gallery').insertAdjacentHTML('afterbegin', `<li><img src="${img.url}" alt="${img.alt}" width = 150 height = 100></li>`);
 });
-galleryList.setAttribute("style", "list-style-type:none; display: flex; flex-direction: space-between; justify-content: space-between;");
+console.log(gallery);
