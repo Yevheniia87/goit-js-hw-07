@@ -33,7 +33,19 @@ const images = [
 
 // console.log(galleryList);
 
-images.forEach(img => {
-  document.querySelector('#gallery').insertAdjacentHTML('afterbegin', `<li><img src="${img.url}" alt="${img.alt}" width = 150 height = 100></li>`);
-});
-console.log(gallery);
+// const galleryEl = images.forEach(img => {
+//   const imgEl = document.querySelector('#gallery');
+
+// });
+// imgEl.insertAdjacentHTML('afterbegin', `<li><img src="${img.url}" alt="${img.alt}" width = 150 height = 100></li>`);
+// console.log(imgEl)
+
+const createGallery = ({ url, alt }) =>
+  `<li><img src="${url}" alt="${alt}" width = 200 height = 150></li>`;
+
+const galleryEl = images.reduce((acc, item) => acc + createGallery(item), '');
+
+const imgEl = document.querySelector('#gallery');
+imgEl.insertAdjacentHTML('afterbegin', galleryEl);
+
+console.log(imgEl);
