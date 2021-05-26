@@ -8,22 +8,24 @@ const ingredients = [
   'Приправы',
 ];
 
-  // const ulList = document.getElementById("ingredients");
-  // ingredients.forEach(ingredient => {
-//      let listIngridients = ulList.appendChild(document.createElement("li"));
-   
-//      listIngridients.append(document.createTextNode(ingredient));
-//  });
 
-  //console.log(ulList);
+const ulList = document.getElementById("ingredients");
+const foodIngredients = ingredient => {
+  let item = document.createElement("li");
+  item.innerHTML = ingredient;
+  return item;
+};
+const listEl = ingredients.flatMap(foodIngredients);
+ulList.append(...listEl);
 
-let ulList = document.getElementById("ingredients");
-const foodIngredients = ingredients.forEach(ingredient => {
-  let items = document.createElement("li");
-  items.innerHTML = ingredient;
-  ulList.append(items);
-});
-console.log(ulList);
+console.log(ulList)
 
 
 
+
+// const ulEl = document.querySelector('#ingredients');
+// const list = ingredients.reduce((str, item) => str + `<li>${item}</li>`, '');
+// ulEl.innerHTML = list;
+
+
+ 
