@@ -24,7 +24,7 @@ const images = [
 // ulList.classList.add('img_block');
 // const ulListEl = document.createElement('images');
 // ulListEl.classList.add('img_list');
- //const galleryList = document.querySelector('#gallery');
+//  const galleryList = document.querySelector('#gallery');
 
 // images.forEach(img => {
 //   galleryList.insertAdjacentHTML('afterbegin', `<li><img src="${img.url}" alt="${img.alt}" width = 150 height = 100></li>`);
@@ -40,6 +40,7 @@ const images = [
 // imgEl.insertAdjacentHTML('afterbegin', `<li><img src="${img.url}" alt="${img.alt}" width = 150 height = 100></li>`);
 // console.log(imgEl)
 
+
 const createGallery = ({ url, alt }) =>
   `<li><img src="${url}" alt="${alt}" width = 200 height = 150></li>`;
 
@@ -49,3 +50,6 @@ const imgEl = document.querySelector('#gallery');
 imgEl.insertAdjacentHTML('afterbegin', galleryEl);
 
 console.log(imgEl);
+
+
+
